@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Filters">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.PocketMoney.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarFilters"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/Theme.PocketMoney.PopupOverlay" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="Show by date"
+            android:fontFamily="sans-serif-medium"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:text="Month"
+                android:fontFamily="sans-serif-medium"
+                android:paddingStart="15dp" />
+
+            <Spinner
+                android:id="@+id/months_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:text="Year"
+        android:fontFamily="sans-serif-medium"
+        android:paddingStart="15dp" />
+
+    <Spinner
+        android:id="@+id/years_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginStart="15dp" />
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="Show by Transaction type"
+            android:fontFamily="sans-serif-medium"
+            android:paddingStart="15dp"
+            android:layout_marginTop="20dp"/>
+
+        <CheckBox android:id="@+id/checkbox_credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Credit"
+            android:onClick="onCheckboxClicked"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:checked="true"/>
+
+        <CheckBox android:id="@+id/checkbox_debit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Debit"
+            android:onClick="onCheckboxClicked"
+            android:layout_marginStart="15dp"
+            android:textSize="18sp"
+            android:checked="true"/>
+
+    <android.widget.Button
+        android:id="@+id/doneFiltersButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="20dp"
+        android:text="Apply"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textAllCaps="false"/>
+
+        <android.widget.Button
+            android:id="@+id/resetFiltersButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="45dp"
+            android:text="Reset"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAllCaps="false"/>
+
+</LinearLayout>
